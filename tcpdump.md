@@ -29,9 +29,9 @@
 > tcpdump -i eth1 icmp
 
 ### 常用表达式
-> 非 : ! or "not" (去掉双引号)
-> 且 : && or "and"
-> 或 : || or "or"
+>非 : ! or "not" (去掉双引号) 
+>且 : && or "and"
+>或 : || or "or"
 
 - 抓取所有经过 eth1，目的地址是 192.168.1.254 或 192.168.1.200 端口是 80 的 TCP 数据
 > tcpdump -i eth1 '((tcp) and (port 80) and ((dst host 192.168.1.254) or (dst host
