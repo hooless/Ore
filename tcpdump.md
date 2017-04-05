@@ -3,7 +3,9 @@ Tcpdump
 
 # 过滤主机
 - 抓取所有经过 eth1，目的或源地址是 192.168.1.1 的网络数据
+---
  tcpdump -i eth1 host 192.168.1.1
+---
 - 源地址
  tcpdump -i eth1 src host 192.168.1.1
 - 目的地址
