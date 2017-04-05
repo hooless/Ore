@@ -17,7 +17,8 @@ Tcpdump
 - 源端口
  tcpdump -i eth1 src port 25
 - 目的端口
- tcpdump -i eth1 dst port 25网络过滤
+ tcpdump -i eth1 dst port 25
+网络过滤
 --------
  tcpdump -i eth1 net 192.168
  tcpdump -i eth1 src net 192.168
