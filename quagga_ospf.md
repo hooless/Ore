@@ -1,5 +1,5 @@
 ## 使用 Quagga 将 CentOS 变成 OSPF 路由器                                                                         
-&emsp&emsp   Quagga是一个开源路由软件套件，可以将Linux变成支持如RIP、OSPF、BGP和IS-IS等主要路由协议的路由器。它具有对IPv4和IPv6的完整支持，并支持路由/前缀过滤。Quagga可以是你生命中的救星，以防你的生产路由器一旦宕机，而你没有备用的设备而只能等待更换。通过适当的配置，Quagga甚至可以作为生产路由器。
+&emsp;&emsp;   Quagga是一个开源路由软件套件，可以将Linux变成支持如RIP、OSPF、BGP和IS-IS等主要路由协议的路由器。它具有对IPv4和IPv6的完整支持，并支持路由/前缀过滤。Quagga可以是你生命中的救星，以防你的生产路由器一旦宕机，而你没有备用的设备而只能等待更换。通过适当的配置，Quagga甚至可以作为生产路由器。
 ```
                     +--------------------------------+                   
                     |     Quagga OSPF - Topology     |                   
