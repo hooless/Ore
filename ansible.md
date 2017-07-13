@@ -2420,3 +2420,8 @@ EXAMPLES = '''
 
 #### Example Modules
 The best way to learn how to write Ansible modules is to read the source code for the modules that ship with Ansible. Check them out on GitHub: [modules core](https://github.com/ansible/ansible-modules-core) and [modules extras](https://github.com/ansible/ansible-modules-extras).
+
+
+
+### Tips 
+- Handlers will only be fired for tasks which report a `changed` state. In the output of your play you can see the status is `ok`, which in this case means no new packages have been installed or updated (since state=latest)
