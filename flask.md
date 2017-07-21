@@ -165,16 +165,6 @@ def user(name):
     return render_template('user.html', name = name)
     # 渲染 template 目录下的 user.html ; render_template 函数的第一个参数是模板的文件名。随后的参数都是键值对，表示模板中变量对应的真实值
 ```
-#### 模版: `变量`
-- Jinja2 能识别所有类型的变量，甚至是一些复杂的类型，例如列表、字典和对象。
-- 过滤器: `修改变量`
-    - safe `渲染值时不转义，显示变量中的 HTML 代码`
-    - capitalize `把值的首字母转换成大写，其他字母转换成小写`
-    - lower `把值转换成小写形式`
-    - upper `把值转换成大写形式`
-    - title `把值中每个单词的首字母都转换成大写`
-    - trim `把值的首尾空格去掉`
-    - striptags `渲染之前把值中所有的 HTML 标签都删掉`
 
 #### 模版: `变量`
 - Jinja2 能识别所有类型的变量，甚至是一些复杂的类型，例如列表、字典和对象。
