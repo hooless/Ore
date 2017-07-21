@@ -1269,18 +1269,11 @@ def test():
 
 
 
+### Tips
+####  flask-wtf
+- Web表单  `它主要在我们的网页中扮演着数据采集的功能`
+- Flask-WTF offers simple integration with WTForms. This integration includes optional CSRF handling for greater security.     
+- [somelink](http://krzer.com/2016/11/27/flask-wtf-introduction/)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+####  编程中什么是「Context(上下文)」？
+ 每一段程序都有很多外部变量。只有像Add这种简单的函数才是没有外部变量的。一旦你的一段程序有了外部变量，这段程序就不完整，不能独立运行。你为了使他们运行，就要给所有的外部变量一个一个写一些值进去。这些值的集合就叫上下文。
