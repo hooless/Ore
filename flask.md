@@ -1277,3 +1277,55 @@ def test():
 
 ####  编程中什么是「Context(上下文)」？
  每一段程序都有很多外部变量。只有像Add这种简单的函数才是没有外部变量的。一旦你的一段程序有了外部变量，这段程序就不完整，不能独立运行。你为了使他们运行，就要给所有的外部变量一个一个写一些值进去。这些值的集合就叫上下文。
+
+
+#### sqlalchemy  `enum`
+```
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+import enum
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root1234@localhost/kaka_db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
+db = SQLAlchemy(app)
+
+class UserType(enum.Enum):
+    puTongUser      = 0
+    guanLiYuan      = 1
+    superGuanLiYuan = 2
+    changJia        = 3
+
+class User(db.Model):
+    __talbename__ = 'user_table'
+    id          = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    userName    = db.Column(db.String(80), unique=True, nullable=False)
+    passWord    = db.Column(db.String(80), nullable=False)
+    phone       = db.Column(db.String(80))
+    email       = db.Column(db.String(80), unique=True)
+    userType    = db.Column(db.Enum(UserType))
+    code        = db.Column(db.String(80), unique=True)
+    pushToken   = db.Column(db.String(80))
+    token       = db.Column(db.String(80))
+    regiserType = db.Column(db.Integer, unique=True)
+    userMoney   = db.Column(db.Float)
+
+    def __init__(self, username, password, phone = None, email = None, code = None, pushToken = None, userType = 0, registerType = 0, userMoney = 0.0):
+        self.userName = username
+        self.passWord = password
+        self.phone = phone
+        self.email = email
+        self.code = code
+        self.pushToken = pushToken
+        self.userType = userType
+        self.regiserType = registerType
+        self.userMoney = userMoney
+
+db.create_all()
+db.session.commit()
+
+
+if __name__ == '__main__':
+    app.run(debug = True)
+
+```
