@@ -2426,3 +2426,4 @@ The best way to learn how to write Ansible modules is to read the source code fo
 ### Tips 
 - Handlers will only be fired for tasks which report a `changed` state. In the output of your play you can see the status is `ok`, which in this case means no new packages have been installed or updated (since state=latest)
 - [15-things-you-should-know-about-ansible](http://codeheaven.io/15-things-you-should-know-about-ansible/)
+- [生产环境](http://www.ywnds.com/?p=6452)
