@@ -230,3 +230,8 @@ severityx,'summary':row['summary'],'tags':row['tags'],'ifgateway':row['ifgateway
 
 
 #### lingxing
+
+
+#### tips
+[基础](http://www.cnblogs.com/vovlie/p/Prometheus_CONCEPTS.html)
+[基础](https://www.hi-linux.com/posts/25047.html)

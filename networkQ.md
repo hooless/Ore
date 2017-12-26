@@ -39,3 +39,6 @@ iptables -A syn-flood -J REJECT
 #### udp 和 tcp 
 
 ####  抓 nat 包
+
+##### 浅谈CLOSE_WAIT
+[here](https://huoding.com/2016/01/19/488)
