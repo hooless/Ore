@@ -223,3 +223,18 @@ int result = ioctl(int fd ,int operation,[arg...]);
 
 
 
+
+####  基础命令的实现
+- who , 读取 /var/adu/utmp
+- ls  , opendir -> readdir -> closedir ; readdir  -> stat(file)
+
+链接：一个链接是指向文件的指针，软链接指向inode ，硬链接是指向 block。
+
+block：存放文件
+inode： 存放文件属性
+superblock： 用来存放文件系统本身的信息
+
+创建文件的过程：inode 存储文件属性 -> free block 存储数据 ->  inode 记录 block -> 添加文件名到目录(文件名和inode 节点的关系)
+
+- pwd ， 查找每一层的 "." ，然后在每一层的父目录中查找 i-节点名字，直到树的顶端。
+
