@@ -31,7 +31,8 @@ def ip_sort(ip_list):
             ip_dict[tuple_segment] += 1
         else
             ip_dict[tuple_segment] = 1
-    return ip_dict
+#    return ip_dict
+    return [x for x in sorted(ip_dict.items(), key=lambda y: y[1])]
 
 
 def ip_group(ip_list, umask):
